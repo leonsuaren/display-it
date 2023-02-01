@@ -1,0 +1,16 @@
+.menu-style {
+  margin: 35px;
+}
+
+li {
+  background-color: #333;
+  box-shadow: 5px 5px 5px #333;
+}
+
+li:hover {
+  background-color: rgb(65, 68, 65);
+}
+
+a {
+  color: aliceblue;
+}
