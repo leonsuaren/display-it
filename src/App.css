@@ -1,7 +1,15 @@
 .point-display {
-  left: 507px;
+  left: 790px;
 }
 
 .point-syntax {
-  left: 594px;
+  left: 870px;
+}
+
+.point-values {
+  left: 950px;
+}
+
+.point-examples {
+  left: 1040px
 }

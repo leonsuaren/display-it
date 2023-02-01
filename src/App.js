@@ -6,6 +6,8 @@ import { Container } from './components/container';
 
 import { Display } from './views/display';
 import { Syntax } from './views/syntax';
+import { Values } from './views/values';
+import { Examples } from './views/examples';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Routes>
             <Route path='/display' element={<Display />} />
             <Route path='/syntax' element={<Syntax />} />
+            <Route path='/values' element={<Values />} />
+            <Route path='/examples' element={<Examples />} />
           </Routes>
         </Container>
       </Router>

@@ -8,8 +8,8 @@ export const Navigation = () => {
     <ul className="menu align-center menu-style">
       <li className='active'><Link to='/display'>Display</Link></li>
       <li><Link to='/syntax'>Syntax</Link></li>
-      <li><Link to=''>Values</Link></li>
-      <li><Link to=''>Examples</Link></li>
+      <li><Link to='/values'>Values</Link></li>
+      <li><Link to='/examples'>Examples</Link></li>
     </ul>
   )
 }
