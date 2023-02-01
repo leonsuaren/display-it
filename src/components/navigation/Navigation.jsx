@@ -1,13 +1,15 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './styles.css';
 
 export const Navigation = () => {
+
   return (
-    <ul class="menu align-center menu-style">
-      <li className='active'><a href="#">One</a></li>
-      <li><a href="#">Two</a></li>
-      <li><a href="#">Three</a></li>
-      <li><a href="#">Four</a></li>
+    <ul className="menu align-center menu-style">
+      <li className='active'><Link to='/display'>Display</Link></li>
+      <li><Link to='/syntax'>Syntax</Link></li>
+      <li><Link to=''>Values</Link></li>
+      <li><Link to=''>Examples</Link></li>
     </ul>
   )
 }
