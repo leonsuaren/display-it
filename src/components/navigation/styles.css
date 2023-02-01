@@ -14,3 +14,13 @@ li:hover {
 a {
   color: aliceblue;
 }
+
+.rounded-left-corners {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.rounded-right-corners {
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}

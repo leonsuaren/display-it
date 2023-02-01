@@ -6,10 +6,10 @@ export const Navigation = () => {
 
   return (
     <ul className="menu align-center menu-style">
-      <li className='active'><Link to='/display'>Display</Link></li>
+      <li className='active rounded-left-corners'><Link className='rounded-left-corners' to='/display'>Display</Link></li>
       <li><Link to='/syntax'>Syntax</Link></li>
       <li><Link to='/values'>Values</Link></li>
-      <li><Link to='/examples'>Examples</Link></li>
+      <li className='rounded-right-corners'><Link className='rounded-right-corners' to='/examples'>Examples</Link></li>
     </ul>
   )
 }
