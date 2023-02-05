@@ -1,4 +1,4 @@
-.container {
+/* .container {
   width: 90vw;
   height: 80vh;
   background-color: rgb(240, 243, 240);
@@ -11,7 +11,7 @@
   z-index: 1;
   margin: 10px;
   padding: 50px;
-}
+} */
 
 .menu-pointer {
   width: 100px;
@@ -24,4 +24,25 @@
   z-index: 0;
   border-radius: 5px;
   transition: left 1s;
+}
+
+@media only screen and (min-width: 350px) {
+  /* .container {
+    width: 90%;
+    height: 80%;
+    background-color: green;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px #333;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    margin: 0 10px;
+    padding: 50px;
+  } */
+  
+  .menu-pointer {
+    display: none;
+  }
 }
