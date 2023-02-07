@@ -21,9 +21,6 @@ a {
   border-top-right-radius: 5px;
 }
 
-@media only screen and (min-width: 350px) {
-  /* .menu-style {
-    margin: 35px 0;
-    width: 100%;
-  } */
+.menu-style {
+  font-size: .9rem;
 }
