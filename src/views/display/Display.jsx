@@ -1,8 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { DisplayWindow } from '../../components/display-window';
+import { FiChevronRight } from "react-icons/fi";
 import './styles.css';
 
 export const Display = () => {
+  const [block, setBlock] = useState(false);
+  const [inlineblock, setInlineblock] = useState(false);
+  const [none, setNone] = useState(false);
+  const [flex, setFlex] = useState(false);
+  const [grid, setGrid] = useState(false);
+
+  const handleOnDisplayBlock = () => {
+    setBlock(s => !s);
+    setInlineblock(false);
+    setNone(false);
+    setFlex(false);
+    setGrid(false);
+  }
+
+  const handleOnDisplayInlineBlock = () => {
+    setBlock(false);
+    setInlineblock(s => !s);
+    setNone(false);
+    setFlex(false);
+    setGrid(false);
+  }
+
+  const handleOnDisplayNone = () => {
+    setBlock(false);
+    setInlineblock(false);
+    setNone(s => !s);
+    setFlex(false);
+    setGrid(false);
+  }
+
+  const handleOnDisplayFlex = () => {
+    setBlock(false);
+    setInlineblock(false);
+    setNone(false);
+    setFlex(s => !s);
+    setGrid(false);
+  }
+
+  const handleOnDisplayGrid = () => {
+    setBlock(false);
+    setInlineblock(false);
+    setNone(false);
+    setFlex(false);
+    setGrid(s => !s);
+  }
+
   return (
     <div className='display-container-layout'>
       <div className='display-description'>
@@ -25,13 +72,30 @@ export const Display = () => {
         <DisplayWindow headerTitle='CSS Demo: display'>
           <div className='mini-window-container'>
             <div>
-              <button className='display-square'>display: block;</button>
-              <button className='display-square'>display: inline-block;</button>
-              <button className='display-square'>display: none;</button>
-              <button className='display-square'>display: flex;</button>
-              <button className='display-square'>display: grid;</button>
+              <button className='display-square' onClick={handleOnDisplayBlock}>display: block;</button>
+              <button className='display-square' onClick={handleOnDisplayInlineBlock}>display: inline-block;</button>
+              <button className='display-square' onClick={handleOnDisplayNone}>display: none;</button>
+              <button className='display-square' onClick={handleOnDisplayFlex}>display: flex;</button>
+              <button className='display-square' onClick={handleOnDisplayGrid}>display: grid;</button>
             </div>
-            <div>two</div>
+            <div className='arrows-middle-section'>
+            {
+              block ? <FiChevronRight className='arrow-icon'/> : <div></div>
+            }
+            {
+              inlineblock ? <FiChevronRight className='arrow-icon'/> : <div></div>
+            }
+            {
+              none ? <FiChevronRight className='arrow-icon'/> : <div></div>
+            }
+            {
+              flex ? <FiChevronRight className='arrow-icon'/> : <div></div>
+            }
+            {
+              grid ? <FiChevronRight className='arrow-icon'/> : <div></div>
+            }
+            </div>
+            <div className='display-property-effect'>two</div>
           </div>
         </DisplayWindow>
       </div>
