@@ -18,7 +18,7 @@ function App() {
           <Navigation />
           <Container>
             <Routes>
-              <Route path='/display' element={<Display />} />
+              <Route path='/' element={<Display />} />
               <Route path='/syntax' element={<Syntax />} />
               <Route path='/values' element={<Values />} />
               <Route path='/examples' element={<Examples />} />

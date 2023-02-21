@@ -1,0 +1,39 @@
+.value-wrapper {
+  display: grid;
+  grid-template-rows: 10% 90%;
+  height: 100%;
+  margin: 20px;
+  align-items: center;
+  justify-items: center;
+  overflow: scroll;
+}
+
+.value-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #8a8a8a;
+}
+
+.value-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.content-cell {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 30% 70%;
+  gap: 10px
+}
+
+.value {
+  background-color: #4d4b4b;
+  color: #f8f6f6;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
