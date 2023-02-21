@@ -9,6 +9,7 @@ export const Display = () => {
   const [none, setNone] = useState(false);
   const [flex, setFlex] = useState(false);
   const [grid, setGrid] = useState(false);
+  const [inlineFlex, setInlineFlex] = useState(false);
 
   const handleOnDisplayBlock = () => {
     setBlock(s => !s);
@@ -16,6 +17,7 @@ export const Display = () => {
     setNone(false);
     setFlex(false);
     setGrid(false);
+    setInlineFlex(false);
   }
 
   const handleOnDisplayInlineBlock = () => {
@@ -24,6 +26,7 @@ export const Display = () => {
     setNone(false);
     setFlex(false);
     setGrid(false);
+    setInlineFlex(false);
   }
 
   const handleOnDisplayNone = () => {
@@ -32,6 +35,7 @@ export const Display = () => {
     setNone(s => !s);
     setFlex(false);
     setGrid(false);
+    setInlineFlex(false);
   }
 
   const handleOnDisplayFlex = () => {
@@ -40,6 +44,7 @@ export const Display = () => {
     setNone(false);
     setFlex(s => !s);
     setGrid(false);
+    setInlineFlex(false);
   }
 
   const handleOnDisplayGrid = () => {
@@ -48,6 +53,16 @@ export const Display = () => {
     setNone(false);
     setFlex(false);
     setGrid(s => !s);
+    setInlineFlex(false);
+  }
+
+  const handleOnDisplayInlineFlex = () => {
+    setBlock(false);
+    setInlineblock(false);
+    setNone(false);
+    setFlex(false);
+    setGrid(false);
+    setInlineFlex(s => !s);
   }
 
   return (
@@ -77,6 +92,10 @@ export const Display = () => {
               <button className='display-square' onClick={handleOnDisplayNone}>display: none;</button>
               <button className='display-square' onClick={handleOnDisplayFlex}>display: flex;</button>
               <button className='display-square' onClick={handleOnDisplayGrid}>display: grid;</button>
+              <button className='display-square' onClick={handleOnDisplayInlineFlex}>display: inline-flex;</button>
+              <button className='display-square' >display: inline-block;</button>
+              <button className='display-square' >display: inline-grid;</button>
+              <button className='display-square' >display: inline-table;</button>
             </div>
             <div className='arrows-middle-section'>
               {
@@ -94,54 +113,72 @@ export const Display = () => {
               {
                 grid ? <FiChevronRight className='arrow-icon' /> : <div></div>
               }
+              {
+                inlineFlex ? <FiChevronRight className='arrow-icon' /> : <div></div>
+              }
             </div>
-            <div className='display-effect-container display-wrapper'>
-              {
-                block ?
-                  <div className='display-property-block'>
-                    <div className='display-block-little-square one'/>
-                    <div className='display-block-little-square two'/>
-                    <div className='display-block-little-square three'/>
-                    <div className='display-block-little-square four'/>
-                    <div className='display-block-little-square five'/>
-                    <div className='display-block-little-square six'/>
-                  </div> : <div></div>
-              }
-              {
-                inlineblock ?
-                  <div className='display-property-inline-block'>
-                    <div className='display-inline-block-little-square one'/>
-                    <div className='display-inline-block-little-square two'/>
-                    <div className='display-inline-block-little-square three'/>
-                    <div className='display-inline-block-little-square four'/>
-                    <div className='display-inline-block-little-square five'/>
-                    <div className='display-inline-block-little-square six'/>
-                  </div> : <div></div>
-              }
-              {
-                none ? <div></div> : <div></div>
-              }
-              {
-                flex ?
-                  <div className='display-property-flex'>
-                    <div className='display-flex-little-square one'/>
-                    <div className='display-flex-little-square two'/>
-                    <div className='display-flex-little-square three'/>
-                    <div className='display-flex-little-square four'/>
-                    <div className='display-flex-little-square five'/>
-                    <div className='display-flex-little-square six'/>
-                  </div> : <div></div>
-              }
-              {
-                grid ?
-                  <div className='display-property-grid'>
-                    <div className='display-grid-square-one one'/>
-                    <div className='display-grid-square-two two'/>
-                    <div className='display-grid-square-three three'/>
-                    <div className='display-grid-square-four four'/>
-                    <div className='display-grid-square-five five'/>
-                  </div> : <div></div>
-              }
+            <div className='display-effect-container'>
+              <div className='display-wrapper'>
+                {
+                  block ?
+                    <div className='display-property-block'>
+                      <div className='display-block-little-square one' />
+                      <div className='display-block-little-square two' />
+                      <div className='display-block-little-square three' />
+                      <div className='display-block-little-square four' />
+                      <div className='display-block-little-square five' />
+                      <div className='display-block-little-square six' />
+                    </div> : <div></div>
+                }
+                {
+                  inlineblock ?
+                    <div className='display-property-inline-block'>
+                      <div className='display-inline-block-little-square one' />
+                      <div className='display-inline-block-little-square two' />
+                      <div className='display-inline-block-little-square three' />
+                      <div className='display-inline-block-little-square four' />
+                      <div className='display-inline-block-little-square five' />
+                      <div className='display-inline-block-little-square six' />
+                    </div> : <div></div>
+                }
+                {
+                  none ? <div></div> : <div></div>
+                }
+                {
+                  flex ?
+                    <div className='display-property-flex'>
+                      <div className='display-flex-little-square one' />
+                      <div className='display-flex-little-square two' />
+                      <div className='display-flex-little-square three' />
+                      <div className='display-flex-little-square four' />
+                      <div className='display-flex-little-square five' />
+                      <div className='display-flex-little-square six' />
+                    </div> : <div></div>
+                }
+                {
+                  grid ?
+                    <div className='display-property-grid'>
+                      <div className='display-grid-square-one one' />
+                      <div className='display-grid-square-two two' />
+                      <div className='display-grid-square-three three' />
+                      <div className='display-grid-square-four four' />
+                      <div className='display-grid-square-five five' />
+                    </div> : <div></div>
+                }
+                {
+                  inlineFlex ?
+                    <div>
+                      <div className='inline-flex-parent one'>
+                        <div className='display-block-little-square three' />
+                        <div className='display-block-little-square five' />
+                      </div>
+                      <div className='inline-flex-parent two'>
+                        <div className='display-block-little-square five' />
+                        <div className='display-block-little-square six' />
+                      </div>
+                    </div> : <div />
+                }
+              </div>
             </div>
           </div>
         </DisplayWindow>
